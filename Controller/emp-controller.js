@@ -8,10 +8,3 @@ exports.create = ((req, res)=>{
     .catch(err=>res.status(400).send(err))
 
 })
-
-exports.list = ((req, res)=>{
-    console.log('Get all employees data');
-    employee.find({})
-    .then((empDetails)=>{res.status(200).send(empDetails)})
-    .catch(err=>res.status(400).send(err))
-})
